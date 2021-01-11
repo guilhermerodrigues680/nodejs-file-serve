@@ -3,17 +3,30 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+  <title>Fazer upload de arquivos</title>
 </head>
 <body>
-  <h1>Upload File</h1>
-  <h2>With <code>"express"</code> npm package</h2>
-  <form action="/api/upload" enctype="multipart/form-data" method="post">
-    <div>Text field title: <input type="text" name="title" /></div>
-    <div>File: <input type="file" name="someExpressFiles" multiple/></div>
-    <input type="submit" value="Upload" />
-  </form>
+  <div class="wrapper">
+    <div class="container">
+      <h1>Fazer upload de arquivos</h1>
+  
+      <form action="/api/upload" enctype="multipart/form-data" method="post">
+        <label>Digite o titulo: 
+          <input type="text" name="title" />
+        </label>
+        <label class="input-file-label">Selecione o arquivo:
+          <input type="file" name="someExpressFiles" multiple/>
+        </label>
+        <input type="submit" value="Enviar" />
+      </form>
+    </div>
 
-  <h3><a href="/uploads">uploads files</a></h3>
+    <div class="container">
+      <a href="/uploads">
+        <button class="button">Visualizar arquivos no servidor</button>
+      </a>
+    </div>
+  </div>
 </body>
 </html>
