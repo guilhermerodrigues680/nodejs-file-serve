@@ -1,0 +1,13 @@
+version: "3.3"
+services:
+  server:
+    container_name: nodejs-file-serve
+    build: .
+    image: nodejs-file-serve:0.0.1
+    ports: 
+      - "8082:8080"
+    expose:
+      - "8082"
+    volumes:
+      - "./public/uploads:/usr/src/app/public/uploads"
+    restart: always
